@@ -1,18 +1,24 @@
 <style>
-/* --------------------------- */
 /* Digital Book Page Flip Effects */
 body {
-    perspective: 2000px;
+    background: #f4f4f4;
+    perspective: 1500px;
 }
+
 .page {
-    transition: transform 1s ease, box-shadow 1s ease;
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
     transform-style: preserve-3d;
     position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background: #fff;
 }
+
 .page:hover {
-    transform: rotateY(-5deg) translateX(-5px);
-    box-shadow: 10px 10px 40px rgba(0,0,0,0.3);
+    transform: rotateY(-8deg) translateX(-8px) scale(1.02);
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.4);
 }
+
 .page::before, .page::after {
     content: '';
     position: absolute;
@@ -22,26 +28,27 @@ body {
     background: linear-gradient(to right, rgba(0,0,0,0.05), rgba(0,0,0,0));
     pointer-events: none;
 }
-.page::before {
-    left: 0;
-}
-.page::after {
-    right: 0;
-}
+
+.page::before { left: 0; }
+.page::after { right: 0; }
 </style>
 
 <script>
-/* --------------------------- */
-/* Optional JS for smooth page flip animation on scroll */
-document.addEventListener('DOMContentLoaded', () => {
+/* Optional: subtle rotation based on mouse movement */
+document.addEventListener('mousemove', e => {
     const pages = document.querySelectorAll('.page');
-    window.addEventListener('scroll', () => {
-        pages.forEach(page => {
-            const rect = page.getBoundingClientRect();
-            const rotate = (rect.top / window.innerHeight) * 15; // adjust rotation angle
-            page.style.transform = `rotateY(${rotate}deg)`;
-        });
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    pages.forEach(page => {
+        const rect = page.getBoundingClientRect();
+        const pageX = rect.left + rect.width / 2;
+        const pageY = rect.top + rect.height / 2;
+        const rotateY = ((e.clientX - pageX) / window.innerWidth) * 10; // max 10deg
+        const rotateX = ((pageY - e.clientY) / window.innerHeight) * 10; // max 10deg
+        page.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
     });
 });
 </script>
+
 
