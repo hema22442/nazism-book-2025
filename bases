@@ -1,1 +1,47 @@
+<style>
+/* --------------------------- */
+/* Digital Book Page Flip Effects */
+body {
+    perspective: 2000px;
+}
+.page {
+    transition: transform 1s ease, box-shadow 1s ease;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.page:hover {
+    transform: rotateY(-5deg) translateX(-5px);
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.3);
+}
+.page::before, .page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: linear-gradient(to right, rgba(0,0,0,0.05), rgba(0,0,0,0));
+    pointer-events: none;
+}
+.page::before {
+    left: 0;
+}
+.page::after {
+    right: 0;
+}
+</style>
+
+<script>
+/* --------------------------- */
+/* Optional JS for smooth page flip animation on scroll */
+document.addEventListener('DOMContentLoaded', () => {
+    const pages = document.querySelectorAll('.page');
+    window.addEventListener('scroll', () => {
+        pages.forEach(page => {
+            const rect = page.getBoundingClientRect();
+            const rotate = (rect.top / window.innerHeight) * 15; // adjust rotation angle
+            page.style.transform = `rotateY(${rotate}deg)`;
+        });
+    });
+});
+</script>
 
