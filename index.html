@@ -5,129 +5,184 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>النازية: دراسة أكاديمية</title>
 <style>
+/* --------------------------- */
+/* إعدادات عامة */
 body {
     font-family: "Arial", sans-serif;
-    line-height: 1.8;
+    background-color: #f9f9f9;
+    color: #222;
     margin: 0;
     padding: 0;
-    background-color: #fefefe;
-    color: #222;
-}
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-header h1 {
-    font-size: 36px;
-    margin: 0;
-}
-header h2 {
-    font-size: 22px;
-    margin-top: 10px;
-    font-weight: normal;
 }
 .container {
     width: 90%;
-    max-width: 1000px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+    page-break-after: always;
 }
-h2.section-title {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+
+/* --------------------------- */
+/* الغلاف */
+.cover {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #333;
+    color: #fff;
+}
+.cover h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.cover h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* --------------------------- */
+/* الفهرس */
+.toc {
     margin-top: 50px;
 }
-p {
-    margin-bottom: 16px;
-    text-align: justify;
+.toc h2 {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
 }
-ul {
+.toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+.toc li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* --------------------------- */
+/* الفصول */
+h2.section-title {
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+    margin-top: 50px;
+    text-align: right;
+}
+p {
+    text-align: justify;
     margin-bottom: 16px;
+    line-height: 1.8;
 }
 .folio {
-    text-align: right;
+    text-align: center;
     font-size: 14px;
     color: #555;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+/* --------------------------- */
+/* تصميم الكتاب الرقمي */
+.page {
+    page-break-after: always;
+    padding: 20px;
 }
 </style>
 </head>
 <body>
 
-<header>
-<h1>النازية: دراسة أكاديمية</h1>
-<h2>إعداد: إبراهيم أيمن | 2025</h2>
-</header>
+<!-- الغلاف -->
+<div class="cover page">
+    <h1>النازية: دراسة أكاديمية</h1>
+    <h2>إعداد: إبراهيم أيمن | 2025</h2>
+</div>
 
-<div class="container">
+<!-- الفهرس -->
+<div class="container page toc">
+    <h2>فهرس المحتويات</h2>
+    <ul>
+        <li>1. المقدمة</li>
+        <li>2. ألمانيا بعد الحرب</li>
+        <li>3. أزمة الهوية</li>
+        <li>4. الفكر النازي</li>
+        <li>5. التنظيم السياسي</li>
+        <li>6. السياسات الداخلية</li>
+        <li>7. السياسات الخارجية</li>
+        <li>8. الحرب العالمية</li>
+        <li>9. الهولوكوست</li>
+        <li>10. آثار النازية</li>
+        <li>11. الخاتمة</li>
+        <li>12. المراجع</li>
+    </ul>
+</div>
 
+<!-- الفصول -->
+<div class="container page">
 <h2 class="section-title">المقدمة</h2>
-<p>
-تعد النازية واحدة من أكثر الظواهر التاريخية تطرفاً وتعقيداً في القرن العشرين...
-(اكمل نص المقدمة الموسع هنا)
-</p>
+<p>تعد النازية واحدة من أكثر الظواهر التاريخية تطرفاً وتعقيداً في القرن العشرين...</p>
+<div class="folio">صفحة 1</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">ألمانيا بعد الحرب</h2>
-<p>
-عاشت ألمانيا عقب الحرب العالمية الأولى ظروفاً صعبة تمثلت في انهيار اقتصادي شامل...
-(اكمل نص الموضوع 1 هنا)
-</p>
+<p>عاشت ألمانيا عقب الحرب العالمية الأولى ظروفاً صعبة تمثلت في انهيار اقتصادي شامل...</p>
+<div class="folio">صفحة 2</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">أزمة الهوية</h2>
-<p>
-أدت الهزيمة الألمانية في الحرب العالمية الأولى إلى ظهور شعور جماعي بالإذلال...
-(اكمل نص الموضوع 2 هنا)
-</p>
+<p>أدت الهزيمة الألمانية في الحرب العالمية الأولى إلى ظهور شعور جماعي بالإذلال...</p>
+<div class="folio">صفحة 3</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">الفكر النازي</h2>
-<p>
-تقوم النازية على منظومة فكرية متشابكة، تمزج بين العنصرية والقومية المتطرفة والشمولية السياسية...
-(اكمل نص الموضوع 3 هنا)
-</p>
+<p>تقوم النازية على منظومة فكرية متشابكة، تمزج بين العنصرية والقومية المتطرفة والشمولية السياسية...</p>
+<div class="folio">صفحة 4</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">التنظيم السياسي</h2>
-<p>
-تم تنظيم الحزب النازي في القيادة العليا، القوات الخاصة SS، القوات العاصفة SA...
-(اكمل نص الموضوع 4 هنا)
-</p>
+<p>تم تنظيم الحزب النازي في القيادة العليا، القوات الخاصة SS، القوات العاصفة SA...</p>
+<div class="folio">صفحة 5</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">السياسات الداخلية</h2>
-<p>
-تم القضاء على كل الأحزاب، الاعتقال التعسفي، إنشاء معسكرات الاعتقال، قوانين نورمبرغ...
-(اكمل نص الموضوع 4-1 هنا)
-</p>
+<p>تم القضاء على كل الأحزاب، الاعتقال التعسفي، إنشاء معسكرات الاعتقال، قوانين نورمبرغ...</p>
+<div class="folio">صفحة 6</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">السياسات الخارجية</h2>
-<p>
-اتبعت النازية سياسة توسعية عدوانية استناداً إلى مفهوم المجال الحيوي (Lebensraum)...
-(اكمل نص الموضوع 5 هنا)
-</p>
+<p>اتبعت النازية سياسة توسعية عدوانية استناداً إلى مفهوم المجال الحيوي (Lebensraum)...</p>
+<div class="folio">صفحة 7</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">الحرب العالمية</h2>
-<p>
-بدأت الحرب العالمية الثانية بغزو بولندا، وتضمنت الانتصارات السريعة، ثم مرحلة التراجع والهزيمة...
-(اكمل نص الموضوع 5-1 هنا)
-</p>
+<p>بدأت الحرب العالمية الثانية بغزو بولندا، وتضمنت الانتصارات السريعة، ثم مرحلة التراجع والهزيمة...</p>
+<div class="folio">صفحة 8</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">الهولوكوست</h2>
-<p>
-كانت الإبادة الجماعية جزءاً من خطة ممنهجة للسيطرة العرقية، استهدف اليهود والمثليين والمعارضين...
-(اكمل نص الموضوع 5-2 هنا)
-</p>
+<p>كانت الإبادة الجماعية جزءاً من خطة ممنهجة للسيطرة العرقية، استهدف اليهود والمثليين والمعارضين...</p>
+<div class="folio">صفحة 9</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">آثار النازية</h2>
-<p>
-النازية تركت آثاراً ضخمة على المستوى البشري، الاقتصادي، والسياسي، وأعادت تشكيل النظام العالمي...
-(اكمل نص الموضوع 6 هنا)
-</p>
+<p>النازية تركت آثاراً ضخمة على المستوى البشري، الاقتصادي، والسياسي...</p>
+<div class="folio">صفحة 10</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">الخاتمة</h2>
-<p>
-إن دراسة جذور النازية وأيديولوجيتها وسياساتها الداخلية والخارجية تساعد على الوقاية من التطرف السياسي والفكري...
-(اكمل نص الخاتمة هنا)
-</p>
+<p>إن دراسة جذور النازية وأيديولوجيتها وسياساتها تساعد على الوقاية من التطرف السياسي والفكري...</p>
+<div class="folio">صفحة 11</div>
+</div>
 
+<div class="container page">
 <h2 class="section-title">المراجع</h2>
 <ul>
 <li>Evans, R. J. (2005). <em>The Third Reich in Power, 1933–1939</em>. Penguin Books. ص. 45–120.</li>
@@ -136,9 +191,7 @@ ul {
 <li>Shirer, W. L. (1960). <em>The Rise and Fall of the Third Reich</em>. Simon & Schuster. ص. 100–520.</li>
 <li>United Nations. (1945). <em>Charter of the United Nations</em>. ص. 1–50.</li>
 </ul>
-
-<div class="folio">صفحة 1</div>
-
+<div class="folio">صفحة 12</div>
 </div>
 
 </body>
